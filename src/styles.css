@@ -1,0 +1,52 @@
+h1,
+h2,
+h4,
+h6 {
+  text-align: center;
+}
+h1 {
+  color: #407088;
+}
+i {
+  font-size: 30px;
+}
+.card_location {
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
+.card {
+  text-align: center;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.dates {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  display: inline;
+  border-radius: 100px;
+  border: 1px solid #407088;
+  padding: 10px 50px;
+  margin: 10px;
+  text-align: center;
+  background-color: #f1f49a;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+}
+button:hover {
+  background: #407088;
+  color: white;
+  border: 1px solid #407088;
+}
+
+#currentWeather {
+  font-size: 30px;
+  text-align: center;
+}
