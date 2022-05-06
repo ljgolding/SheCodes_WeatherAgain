@@ -64,6 +64,8 @@ function showTemperatureCurrent(response) {
   currentNow.innerHTML = `It is ${temperature}°C in ${response.data.name}`;
 }
 
+//STARTING POINT A
+
 function searchCityA(event) {
   event.preventDefault();
   let pointA = document.querySelector("#pointA");
@@ -86,7 +88,27 @@ function showTemperatureA(response) {
   let temperatureMin = Math.round(response.data.main.temp_min);
   let tempAmin = document.querySelector("#minTempA");
   tempAmin.innerHTML = `${temperatureMin}`;
+ 
+  let iconElement = document.querySelector("#iconA");
+  iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let descriptionElement = document.querySelector("#descriptionA");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let windElement = document.querySelector("#windA");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let humidityElement = document.querySelector("#humidityA");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+    
+
 }
+
+//CHECKPOINT #1 B
 
 function searchCityB(event) {
   event.preventDefault();
@@ -104,9 +126,33 @@ formB.addEventListener("submit", searchCityB);
 
 function showTemperatureB(response) {
   let temperature = Math.round(response.data.main.temp);
-  let tempBnow = document.querySelector("#currentTempB");
-  tempBnow.innerHTML = `${temperature}`;
+  let tempnow = document.querySelector("#currentTempB");
+  tempnow.innerHTML = `${temperature}`;
+
+  let temperatureMin = Math.round(response.data.main.temp_min);
+  let tempmin = document.querySelector("#minTempB");
+  tempmin.innerHTML = `${temperatureMin}`;
+
+  let iconElement = document.querySelector("#iconB");
+  iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let descriptionElement = document.querySelector("#descriptionB");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let windElement = document.querySelector("#windB");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let humidityElement = document.querySelector("#humidityB");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+
+
+
 }
+//CHECKPOINT #2 C
 
 function searchCityC(event) {
   event.preventDefault();
@@ -126,7 +172,32 @@ function showTemperatureC(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempCnow = document.querySelector("#currentTempC");
   tempCnow.innerHTML = `${temperature}`;
+
+  let temperatureMin = Math.round(response.data.main.temp_min);
+  let tempmin = document.querySelector("#minTempC");
+  tempmin.innerHTML = `${temperatureMin}`;
+
+
+      let iconElement = document.querySelector("#iconC");
+      iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+      iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let descriptionElement = document.querySelector("#descriptionC");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let windElement = document.querySelector("#windC");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let humidityElement = document.querySelector("#humidityC");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+
+
 }
+
+//CHECKPOINT #3 D
 
 function searchCityD(event) {
   event.preventDefault();
@@ -146,7 +217,32 @@ function showTemperatureD(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempDnow = document.querySelector("#currentTempD");
   tempDnow.innerHTML = `${temperature}`;
+
+    let temperatureMin = Math.round(response.data.main.temp_min);
+    let tempmin = document.querySelector("#minTempD");
+    tempmin.innerHTML = `${temperatureMin}`;
+
+       let iconElement = document.querySelector("#iconD");
+      iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+      iconElement.setAttribute("alt", response.data.weather[0].description);
+  let descriptionElement = document.querySelector("#descriptionD");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let windElement = document.querySelector("#windD");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let humidityElement = document.querySelector("#humidityD");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+
+
+
+
 }
+
+//FINAL DESTINATION E
 
 function searchCityE(event) {
   event.preventDefault();
@@ -166,4 +262,28 @@ function showTemperatureE(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempEnow = document.querySelector("#currentTempE");
   tempEnow.innerHTML = `${temperature}`;
+
+    let temperatureMin = Math.round(response.data.main.temp_min);
+    let tempmin = document.querySelector("#minTempE");
+    tempmin.innerHTML = `${temperatureMin}`;
+
+       let iconElement = document.querySelector("#iconE");
+       iconElement.setAttribute(
+         "src",
+         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+       );
+       iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let descriptionElement = document.querySelector("#descriptionE");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let windElement = document.querySelector("#windE");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let humidityElement = document.querySelector("#humidityE");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+
+
+
+
 }
