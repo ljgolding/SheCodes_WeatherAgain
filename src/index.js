@@ -85,10 +85,6 @@ function showTemperatureA(response) {
   let tempAnow = document.querySelector("#currentTempA");
   tempAnow.innerHTML = `${temperature}`;
 
-  let temperatureMin = Math.round(response.data.main.temp_min);
-  let tempAmin = document.querySelector("#minTempA");
-  tempAmin.innerHTML = `${temperatureMin}`;
- 
   let iconElement = document.querySelector("#iconA");
   iconElement.setAttribute(
       "src",
@@ -105,8 +101,36 @@ function showTemperatureA(response) {
   let humidityElement = document.querySelector("#humidityA");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
     
-
+celsiusTemperatureA = response.data.main.temp;
 }
+
+function displayFahrenheitTemperatureA(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempA");
+
+  celsiusLinkA.classList.remove("active");
+  fahrenheitLinkA.classList.add("active");
+
+  let fahrenheitTemperatureA = (celsiusTemperatureA * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureA);
+}
+
+function displayCelsiusTemperatureA(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempA");
+
+  celsiusLinkA.classList.add("active");
+  fahrenheitLinkA.classList.remove("active");
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperatureA);
+}
+
+let fahrenheitLinkA = document.querySelector("#fahrenheit-linkA");
+fahrenheitLinkA.addEventListener("click", displayFahrenheitTemperatureA);
+
+let celsiusLinkA = document.querySelector("#celsius-linkA");
+celsiusLinkA.addEventListener("click", displayCelsiusTemperatureA);
+
 
 //CHECKPOINT #1 B
 
@@ -129,9 +153,7 @@ function showTemperatureB(response) {
   let tempnow = document.querySelector("#currentTempB");
   tempnow.innerHTML = `${temperature}`;
 
-  let temperatureMin = Math.round(response.data.main.temp_min);
-  let tempmin = document.querySelector("#minTempB");
-  tempmin.innerHTML = `${temperatureMin}`;
+
 
   let iconElement = document.querySelector("#iconB");
   iconElement.setAttribute(
@@ -149,9 +171,39 @@ function showTemperatureB(response) {
   let humidityElement = document.querySelector("#humidityB");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
 
-
+celsiusTemperatureB = response.data.main.temp;
 
 }
+
+function displayFahrenheitTemperatureB(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempB");
+
+  celsiusLinkB.classList.remove("active");
+  fahrenheitLinkB.classList.add("active");
+
+  let fahrenheitTemperatureB = (celsiusTemperatureB * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureB);
+}
+
+function displayCelsiusTemperatureB(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempB");
+
+  celsiusLinkB.classList.add("active");
+  fahrenheitLinkB.classList.remove("active");
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperatureB);
+}
+
+let fahrenheitLinkB = document.querySelector("#fahrenheit-linkB");
+fahrenheitLinkB.addEventListener("click", displayFahrenheitTemperatureB);
+
+let celsiusLinkB = document.querySelector("#celsius-linkB");
+celsiusLinkB.addEventListener("click", displayCelsiusTemperatureB);
+
+
+
 //CHECKPOINT #2 C
 
 function searchCityC(event) {
@@ -173,10 +225,6 @@ function showTemperatureC(response) {
   let tempCnow = document.querySelector("#currentTempC");
   tempCnow.innerHTML = `${temperature}`;
 
-  let temperatureMin = Math.round(response.data.main.temp_min);
-  let tempmin = document.querySelector("#minTempC");
-  tempmin.innerHTML = `${temperatureMin}`;
-
 
       let iconElement = document.querySelector("#iconC");
       iconElement.setAttribute(
@@ -193,9 +241,41 @@ function showTemperatureC(response) {
 
   let humidityElement = document.querySelector("#humidityC");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
-
+celsiusTemperatureC = response.data.main.temp;
 
 }
+
+function displayFahrenheitTemperatureC(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempC");
+
+  celsiusLinkC.classList.remove("active");
+  fahrenheitLinkC.classList.add("active");
+
+  let fahrenheitTemperatureC = (celsiusTemperatureC * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureC);
+}
+
+function displayCelsiusTemperatureC(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempC");
+
+  celsiusLinkC.classList.add("active");
+  fahrenheitLinkC.classList.remove("active");
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperatureC);
+}
+
+let fahrenheitLinkC = document.querySelector("#fahrenheit-linkC");
+fahrenheitLinkC.addEventListener("click", displayFahrenheitTemperatureC);
+
+let celsiusLinkC = document.querySelector("#celsius-linkC");
+celsiusLinkC.addEventListener("click", displayCelsiusTemperatureC);
+
+
+
+
+
 
 //CHECKPOINT #3 D
 
@@ -218,10 +298,6 @@ function showTemperatureD(response) {
   let tempDnow = document.querySelector("#currentTempD");
   tempDnow.innerHTML = `${temperature}`;
 
-    let temperatureMin = Math.round(response.data.main.temp_min);
-    let tempmin = document.querySelector("#minTempD");
-    tempmin.innerHTML = `${temperatureMin}`;
-
        let iconElement = document.querySelector("#iconD");
       iconElement.setAttribute(
         "src",
@@ -237,10 +313,38 @@ function showTemperatureD(response) {
   let humidityElement = document.querySelector("#humidityD");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
 
-
+celsiusTemperatureD = response.data.main.temp;
 
 
 }
+
+function displayFahrenheitTemperatureD(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempD");
+
+  celsiusLinkD.classList.remove("active");
+  fahrenheitLinkD.classList.add("active");
+
+  let fahrenheitTemperatureD = (celsiusTemperatureD * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureD);
+}
+
+function displayCelsiusTemperatureD(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempD");
+
+  celsiusLinkD.classList.add("active");
+  fahrenheitLinkD.classList.remove("active");
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperatureD);
+}
+
+let fahrenheitLinkD = document.querySelector("#fahrenheit-linkD");
+fahrenheitLinkD.addEventListener("click", displayFahrenheitTemperatureD);
+
+let celsiusLinkD = document.querySelector("#celsius-linkD");
+celsiusLinkD.addEventListener("click", displayCelsiusTemperatureD);
+
 
 //FINAL DESTINATION E
 
@@ -263,10 +367,6 @@ function showTemperatureE(response) {
   let tempEnow = document.querySelector("#currentTempE");
   tempEnow.innerHTML = `${temperature}`;
 
-    let temperatureMin = Math.round(response.data.main.temp_min);
-    let tempmin = document.querySelector("#minTempE");
-    tempmin.innerHTML = `${temperatureMin}`;
-
        let iconElement = document.querySelector("#iconE");
        iconElement.setAttribute(
          "src",
@@ -283,7 +383,34 @@ function showTemperatureE(response) {
   let humidityElement = document.querySelector("#humidityE");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
 
-
+celsiusTemperatureE = response.data.main.temp;
 
 
 }
+
+function displayFahrenheitTemperatureE(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempE");
+
+  celsiusLinkE.classList.remove("active");
+  fahrenheitLinkE.classList.add("active");
+
+  let fahrenheitTemperatureE = (celsiusTemperatureE * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureE);
+}
+
+function displayCelsiusTemperatureE(event) {
+  event.preventDefault;
+  let temperatureElement = document.querySelector("#currentTempE");
+
+  celsiusLinkE.classList.add("active");
+  fahrenheitLinkE.classList.remove("active");
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperatureE);
+}
+
+let fahrenheitLinkE = document.querySelector("#fahrenheit-linkE");
+fahrenheitLinkE.addEventListener("click", displayFahrenheitTemperatureE);
+
+let celsiusLinkE = document.querySelector("#celsius-linkE");
+celsiusLinkE.addEventListener("click", displayCelsiusTemperatureE);
