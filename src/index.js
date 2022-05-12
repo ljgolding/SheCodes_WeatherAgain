@@ -102,34 +102,67 @@ function showTemperatureA(response) {
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
     
 celsiusTemperatureA = response.data.main.temp;
+
+    getForecastA(response.data.coord);
 }
 
-function displayFahrenheitTemperatureA(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempA");
+function getForecastA(coordinates) {
+  console.log(coordinates);
+  let apiKey = "f3dfa8d7baf16dece455736a2124255f";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiURL);
 
-  celsiusLinkA.classList.remove("active");
-  fahrenheitLinkA.classList.add("active");
+  axios.get(apiURL).then(displayForecastA);
+}
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  let fahrenheitTemperatureA = (celsiusTemperatureA * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureA);
+  return days[day];
 }
 
-function displayCelsiusTemperatureA(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempA");
+function displayForecastA(response) {
+  let forecast = response.data.daily;
 
-  celsiusLinkA.classList.add("active");
-  fahrenheitLinkA.classList.remove("active");
+  let forecastElement = document.querySelector("#forecastA");
 
-  temperatureElement.innerHTML = Math.round(celsiusTemperatureA);
+  let forecastHTML = `<div class = "row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+            <div class="col-2">
+              <div class="weather-forecast-date">
+                ${formatDay(forecastDay.dt)}
+                </div>
+              <img src="http:/openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" alt="" width="36"/>
+               
+                <div class="weather-forecast-temperatures">
+              
+                  <span class="weather-forecast-temperature-max">${Math.round(
+                    forecastDay.temp.max
+                  )} </span> 
+                  <span class="weather-forecast-temperature-min">${Math.round(
+                    forecastDay.temp.min
+                  )}</span>
+               </div>
+            </div>
+              
+  `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
-let fahrenheitLinkA = document.querySelector("#fahrenheit-linkA");
-fahrenheitLinkA.addEventListener("click", displayFahrenheitTemperatureA);
+displayForecastA();
 
-let celsiusLinkA = document.querySelector("#celsius-linkA");
-celsiusLinkA.addEventListener("click", displayCelsiusTemperatureA);
 
 
 //CHECKPOINT #1 B
@@ -175,32 +208,7 @@ celsiusTemperatureB = response.data.main.temp;
 
 }
 
-function displayFahrenheitTemperatureB(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempB");
 
-  celsiusLinkB.classList.remove("active");
-  fahrenheitLinkB.classList.add("active");
-
-  let fahrenheitTemperatureB = (celsiusTemperatureB * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureB);
-}
-
-function displayCelsiusTemperatureB(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempB");
-
-  celsiusLinkB.classList.add("active");
-  fahrenheitLinkB.classList.remove("active");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperatureB);
-}
-
-let fahrenheitLinkB = document.querySelector("#fahrenheit-linkB");
-fahrenheitLinkB.addEventListener("click", displayFahrenheitTemperatureB);
-
-let celsiusLinkB = document.querySelector("#celsius-linkB");
-celsiusLinkB.addEventListener("click", displayCelsiusTemperatureB);
 
 
 
@@ -245,32 +253,7 @@ celsiusTemperatureC = response.data.main.temp;
 
 }
 
-function displayFahrenheitTemperatureC(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempC");
 
-  celsiusLinkC.classList.remove("active");
-  fahrenheitLinkC.classList.add("active");
-
-  let fahrenheitTemperatureC = (celsiusTemperatureC * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureC);
-}
-
-function displayCelsiusTemperatureC(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempC");
-
-  celsiusLinkC.classList.add("active");
-  fahrenheitLinkC.classList.remove("active");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperatureC);
-}
-
-let fahrenheitLinkC = document.querySelector("#fahrenheit-linkC");
-fahrenheitLinkC.addEventListener("click", displayFahrenheitTemperatureC);
-
-let celsiusLinkC = document.querySelector("#celsius-linkC");
-celsiusLinkC.addEventListener("click", displayCelsiusTemperatureC);
 
 
 
@@ -318,32 +301,7 @@ celsiusTemperatureD = response.data.main.temp;
 
 }
 
-function displayFahrenheitTemperatureD(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempD");
 
-  celsiusLinkD.classList.remove("active");
-  fahrenheitLinkD.classList.add("active");
-
-  let fahrenheitTemperatureD = (celsiusTemperatureD * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureD);
-}
-
-function displayCelsiusTemperatureD(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempD");
-
-  celsiusLinkD.classList.add("active");
-  fahrenheitLinkD.classList.remove("active");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperatureD);
-}
-
-let fahrenheitLinkD = document.querySelector("#fahrenheit-linkD");
-fahrenheitLinkD.addEventListener("click", displayFahrenheitTemperatureD);
-
-let celsiusLinkD = document.querySelector("#celsius-linkD");
-celsiusLinkD.addEventListener("click", displayCelsiusTemperatureD);
 
 
 //FINAL DESTINATION E
@@ -388,29 +346,4 @@ celsiusTemperatureE = response.data.main.temp;
 
 }
 
-function displayFahrenheitTemperatureE(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempE");
 
-  celsiusLinkE.classList.remove("active");
-  fahrenheitLinkE.classList.add("active");
-
-  let fahrenheitTemperatureE = (celsiusTemperatureE * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureE);
-}
-
-function displayCelsiusTemperatureE(event) {
-  event.preventDefault;
-  let temperatureElement = document.querySelector("#currentTempE");
-
-  celsiusLinkE.classList.add("active");
-  fahrenheitLinkE.classList.remove("active");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperatureE);
-}
-
-let fahrenheitLinkE = document.querySelector("#fahrenheit-linkE");
-fahrenheitLinkE.addEventListener("click", displayFahrenheitTemperatureE);
-
-let celsiusLinkE = document.querySelector("#celsius-linkE");
-celsiusLinkE.addEventListener("click", displayCelsiusTemperatureE);
