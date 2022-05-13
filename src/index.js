@@ -106,17 +106,17 @@ function displayForecastA(response) {
 
   let forecastElement = document.querySelector("#forecastA");
 
-  let forecastHTML = `<div class="row">  
-  
+  let forecastHTML = `<div class="row"> 
+
   
   `;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `  
                 <div class="col-2">
-                
+                <div class="card">
                   <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
@@ -135,6 +135,7 @@ function displayForecastA(response) {
                       forecastDay.temp.min
                     )}° </span>
                   </div>
+                </div>
                 </div>
               `;
     }
@@ -214,14 +215,14 @@ function displayForecastB(response) {
 
   let forecastElement = document.querySelector("#forecastB");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row">`
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `  
                 <div class="col-2">
-
+                <div class="card">
                   <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
@@ -241,11 +242,12 @@ function displayForecastB(response) {
                     )}° </span>
                   </div>
                 </div>
+                </div>
               `;
     }
   });
 
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</div> `;
   forecastElement.innerHTML = forecastHTML;
 }
 
