@@ -12,20 +12,19 @@
 </head>
 <body>
 <div class="container">
+<br>
+<br>  
 <h1> Road Trip Weather Forecast</h1>
 <br>
 <hr>
 <br>
-
-      
-                    
+<div class="current_location_section">                  
 <button id="currentLocation">Check Current Location Now </button>
-              
-<span id="currentWeather">Weather in your current location</span>
+            
+<div id="currentWeather">Weather in your current location</div>
 
-<br>
-<br>
-<a href="https://github.com/ljgolding/SheCodes_WeatherAgain">Open Source Code</a> by Lindsay Golding
+
+<a href="https://github.com/ljgolding/SheCodes_WeatherAgain">Open Source Code</a> by Lindsay Golding</div>
 <hr>
 
 <br>
@@ -39,33 +38,33 @@
 
   <div class="col-sm-2">
       <form id="locationA">
-          <input type="Text" id="pointA" placeholder="Enter starting point" autofocus="on"/>
-            <input type="submit" value="search">
+          <input type="Text" id="pointA" placeholder="Enter starting point" autofocus="on" class=search_input/>
+            <input type="submit" value="Search" class="search_button">
         </form>
         </div>
 
   <div class="col-sm-2">
         <form id="locationB">
-      <input type="Text" id="pointB" placeholder="Enter checkpoint #1"/>
-      <input type="submit" value="search">
+      <input type="Text" id="pointB" placeholder="Enter checkpoint #1"class=search_input/>
+      <input type="submit" value="Search" class="search_button">
     </form>
     </div>
   <div class="col-sm-2">
         <form id="locationC">
-      <input type="Text" id="pointC" placeholder="Enter checkpoint #2"/>
-      <input type="submit" value="search">
+      <input type="Text" id="pointC" placeholder="Enter checkpoint #2"class=search_input/>
+      <input type="submit" value="Search" class="search_button">
     </form>
     </div>
   <div class="col-sm-2">
         <form id="locationD">
-      <input type="Text" id="pointD" placeholder="Enter checkpoint #3"/>
-      <input type="submit" value="search">
+      <input type="Text" id="pointD" placeholder="Enter checkpoint #3"class=search_input/>
+      <input type="submit" value="Search" class="search_button">
     </form>
     </div>
   <div class="col-sm-2">
         <form id="locationE">
-      <input type="Text" id="pointE" placeholder="Enter destination"/>
-      <input type="submit" value="search">
+      <input type="Text" id="pointE" placeholder="Enter destination"class=search_input/>
+      <input type="submit" value="Search" class="search_button">
     </form>
     </div>
 
@@ -76,51 +75,8 @@
 
 <div class="row">
    <div class="col-sm-2" style="width: 12rem;">
-  <br>
-        <h4>ROAD TRIP<br>LOCATIONS</h4>
-       
-  
-    </div>
-
-  <div class="col-sm-2">
-    <div class="card_location" style="width: 12rem;">
-        <h6>Starting Point:</h6>
-
-        <h4><span id="resultA">_____</span></h4>
-        </div>
-    </div>
-
-   <div class="col-sm-2">
-    <div class="card_location" style="width: 12rem;">
-    
-    
-        <h6>Checkpoint #1:</h6>
-        <h4><span id=resultB>_____</span></h4>
-        </div>
-    </div>
-   <div class="col-sm-2">
-    <div class="card_location" style="width: 12rem;">
-          <h6>Checkpoint #2:</h6>
-        <h4><span id=resultC>_____</span></h4>
-        </div>
-    </div>
-   <div class="col-sm-2">
-    <div class="card_location" style="width: 12rem;">
-          <h6>Checkpoint #3:</h6>
-        <h4><span id=resultD>_____</span></h4>
-        </div>
-    </div>
-   <div class="col-sm-2">
-    <div class="card_location" style="width: 12rem;">
-         <h6>Destination:</h6>
-        <h4><span id=resultE>_____</span></h4>
-        </div>
-    </div>
-
-
-
-<div class="row">
-   <div class="col-sm-2" style="width: 12rem;">
+    <br>
+    <h4>ROAD TRIP<br>LOCATIONS</h4>
   <br>
   <div class="dates">
         <h4>TODAY</h4>
@@ -131,6 +87,8 @@
 
   <div class="col-sm-2">
     <div class="card" style="width: 12rem;">
+       <h6>Starting Point:</h6>
+       <h4><span id="resultA">_____</span></h4>
        <h6><span id="currentTempA">___</span>°C</h6>
             <div class="weather-temperature">
                     <img
@@ -155,6 +113,8 @@
  </div>
    <div class="col-sm-2">
     <div class="card" style="width: 12rem;">
+        <h6>Checkpoint #1:</h6>
+        <h4><span id=resultB>_____</span></h4>
         <h6><span id="currentTempB">___</span>°C</h6>
       <div class="weather-temperature">
                     <img
@@ -179,6 +139,8 @@
  </div>
     <div class="col-sm-2">
     <div class="card" style="width: 12rem;">
+        <h6>Checkpoint #2:</h6>
+        <h4><span id=resultC>_____</span></h4>
         <h6><span id="currentTempC">___</span>°C</h6>
            <div class="weather-temperature">
                     <img
@@ -202,7 +164,8 @@
  </div>
     <div class="col-sm-2">
     <div class="card" style="width: 12rem;">
-  
+        <h6>Checkpoint #3:</h6>
+        <h4><span id=resultD>_____</span></h4>
         <h6><span id="currentTempD">___</span>°C</h6>
           <div class="weather-temperature">
              <img
@@ -227,7 +190,8 @@
  </div>
     <div class="col-sm-2">
     <div class="card" style="width: 12rem;">
-
+        <h6>Destination:</h6>
+        <h4><span id=resultE>_____</span></h4>
         <h6><span id="currentTempE">___</span>°C</h6>
             <div class="weather-temperature">
              <img
@@ -254,28 +218,29 @@
  <br>
 <hr>
  <br>
-<div class="col-12"><div class="card">
-<span id="forecastCityA">Starting Point</span>
+<div class="col-12"><div class="card_cityTitle">
+<span class=forecastCitiesTitle id="forecastCityA">Starting Point</span>
 </div></div>
+
 <div class="weather-forecast" id="forecastA"></div>
 
-<div class="col-12"><div class="card">
-<span id="forecastCityB">Checkpoint #1</span>
+<div class="col-12"><div class="card_cityTitle">
+<span class=forecastCitiesTitle id="forecastCityB">Checkpoint #1</span>
 </div></div>
 <div class="weather-forecast" id="forecastB"></div>
 
-<div class="col-12"><div class="card">
-<span id="forecastCityC">Checkpoint #2</span>
+<div class="col-12"><div class="card_cityTitle">
+<span class=forecastCitiesTitle id="forecastCityC">Checkpoint #2</span>
 </div></div>
 <div class="weather-forecast" id="forecastC"></div>    
 
-<div class="col-12"><div class="card">
-<span id="forecastCityD">Checkpoint #3</span>
+<div class="col-12"><div class="card_cityTitle">
+<span class=forecastCitiesTitle id="forecastCityD">Checkpoint #3</span>
 </div></div>
 <div class="weather-forecast" id="forecastD"></div>  
 
-<div class="col-12"><div class="card">
-<span id="forecastCityE">Destination</span>
+<div class="col-12"><div class="card_cityTitle">
+<span class=forecastCitiesTitle id="forecastCityE">Destination</span>
 </div></div>
 <div class="weather-forecast" id="forecastE"></div>  
 

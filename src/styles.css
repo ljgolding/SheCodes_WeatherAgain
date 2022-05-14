@@ -34,13 +34,31 @@ text-transform: capitalize;
   text-align: center;
   padding: 5px;
   margin: 10px;
+  
 }
 .card {
   text-align: center;
-  border-radius: 25px;
+  border-radius: 25px !important;
   padding: 10px;
   margin: 10px;
+  
 }
+
+.card_cityTitle {
+  border-radius: 5px !important;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.125);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+
+}
+
+
 
 .dates {
   display: block;
@@ -48,12 +66,23 @@ text-transform: capitalize;
   margin: 10px;
 }
 
+.current_location_section{
+  text-align:center;
+  display: block;
+  padding: 10px 50px;
+  }
+
+  #currentWeather {
+    padding:20px 10px;
+  }
+  
+
 button {
-  display: inline;
+
   border-radius: 100px !important;
   border: 1px solid #407088;
   padding: 10px 50px;
-  margin: 10px;
+  margin: 0 auto;
   text-align: center;
   background-color: #f1f49a;
   transition: all 200ms ease;
@@ -66,9 +95,43 @@ button:hover {
   border: 1px solid #407088;
 }
 
+.search_input{
+  border-radius: 10px !important;
+  border: 1px solid #407088;
+  padding: 2px 5px;
+  margin: 5px;
+
+}
+
+
+.search_button {
+  border-radius: 7px !important;
+  border: 1px solid #407088;
+  padding: 2px 5px;
+  margin: 5px;
+  background-color: #f1f49a;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+
+}
+
+.search_button:hover {
+  background: #407088;
+  color: white;
+  border: 1px solid #407088;
+}
+
+
+
 #currentWeather {
   font-size: 30px;
   text-align: center;
+}
+.forecastCitiesTitle {
+  font: 10px;
+  opacity: 0.5;
+  text-align:center;
 }
 
 
@@ -78,7 +141,7 @@ button:hover {
 }
 
 .weather-forecast-date {
-        font: 16px;
+        font: 10px;
         color: #000;
 }
 
@@ -90,6 +153,4 @@ button:hover {
     opacity: 0.5;
 }
 
-.card {
-  text-align:center;
-}
+

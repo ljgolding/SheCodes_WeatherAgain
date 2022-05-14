@@ -116,8 +116,7 @@ function displayForecastA(response) {
         forecastHTML +
         `  
                 <div class="col-2">
-                <div class="card">
-                  <div class="weather-forecast-date">${formatDay(
+                 <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
                   <img
@@ -136,7 +135,8 @@ function displayForecastA(response) {
                     )}° </span>
                   </div>
                 </div>
-                </div>
+              
+              
               `;
     }
   });
@@ -222,8 +222,7 @@ function displayForecastB(response) {
         forecastHTML +
         `  
                 <div class="col-2">
-                <div class="card">
-                  <div class="weather-forecast-date">${formatDay(
+                 <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
                   <img
@@ -242,7 +241,7 @@ function displayForecastB(response) {
                     )}° </span>
                   </div>
                 </div>
-                </div>
+                
               `;
     }
   });
@@ -330,7 +329,7 @@ function displayForecastC(response) {
         forecastHTML +
         `  
                 <div class="col-2">
-                <div class="card">
+               
                   <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
@@ -350,7 +349,7 @@ function displayForecastC(response) {
                     )}° </span>
                   </div>
                 </div>
-                </div>
+              
               `;
     }
   });
@@ -436,7 +435,7 @@ function displayForecastD(response) {
         forecastHTML +
         `  
                 <div class="col-2">
-                <div class="card">
+               
                   <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
@@ -455,8 +454,7 @@ function displayForecastD(response) {
                       forecastDay.temp.min
                     )}° </span>
                   </div>
-                </div>
-                </div>
+                 </div>
               `;
     }
   });
@@ -537,7 +535,6 @@ function displayForecastE(response) {
         forecastHTML +
         `  
                 <div class="col-2">
-                <div class="card">
                   <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</div>
@@ -556,7 +553,6 @@ function displayForecastE(response) {
                       forecastDay.temp.min
                     )}° </span>
                   </div>
-                </div>
                 </div>
               `;
     }
