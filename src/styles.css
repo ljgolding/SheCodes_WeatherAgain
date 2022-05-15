@@ -1,5 +1,10 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 h1,
-h2,
+h3,
 h4,
 h6 {
   text-align: center;
@@ -44,21 +49,6 @@ text-transform: capitalize;
   
 }
 
-.card_cityTitle {
-  border-radius: 5px !important;
-  padding: 5px;
-  margin: 5px;
-  text-align: center;
-  border: 1px solid rgba(0,0,0,.125);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-
-}
-
-
 
 .dates {
   display: block;
@@ -69,11 +59,12 @@ text-transform: capitalize;
 .current_location_section{
   text-align:center;
   display: block;
-  padding: 10px 50px;
+  padding: 5px 10px;
   }
 
   #currentWeather {
-    padding:20px 10px;
+    padding:10px 5px 5px 5px;
+    font-size:16px;
   }
   
 
@@ -123,16 +114,54 @@ button:hover {
 }
 
 
-
 #currentWeather {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
+
+.card_cityTitle {
+  border-radius: 5px !important;
+  padding: 2.5px;
+  margin: 2.5px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.125);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+
+}
+
+.selected_cityTitle {
+  border-radius: 5px !important;
+  padding: 2.5px;
+  margin: 2.5px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.125);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #f1f49a
+
+}
+
+
 .forecastCitiesTitle {
-  font: 10px;
+  font-size: 14px;
   opacity: 0.5;
   text-align:center;
 }
+
+.selected_forecastCitiesTitle {
+  font-size: 14px;
+  font-weight:550;
+  color:#407088;
+  text-align:center;
+}
+
 
 
 .weather-forecast { 
@@ -151,6 +180,12 @@ button:hover {
 
 .weather-forecast-temperature-min {
     opacity: 0.5;
+}
+
+.codedBy{
+  font-size:small;
+  text-align:center;
+  padding:5px;
 }
 
 

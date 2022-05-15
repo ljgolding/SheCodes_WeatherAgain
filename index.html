@@ -14,22 +14,16 @@
 <div class="container">
 <br>
 <br>  
-<h1> Road Trip Weather Forecast</h1>
-<br>
-<hr>
+<h1> Road Trip Weather Checker</h1>
 <br>
 <div class="current_location_section">                  
-<button id="currentLocation">Check Current Location Now </button>
-            
-<div id="currentWeather">Weather in your current location</div>
-
-
-<a href="https://github.com/ljgolding/SheCodes_WeatherAgain">Open Source Code</a> by Lindsay Golding</div>
+<button id="currentLocation">Check Current Location Now </button>         
+<div id="currentWeather"></div>
+</div>
 <hr>
 
-<br>
 
-<h2>Check the weather along your route</h2>
+<h3>Check the weather along your route</h3>
 <br>
 <div class="row">
   <div class="col-sm-2">
@@ -216,30 +210,29 @@
  </div>
  <br>
  <br>
-<hr>
  <br>
-<div class="col-12"><div class="card_cityTitle">
+<div class="col-12"><div class="card_cityTitle" id="cityTitleA">
 <span class=forecastCitiesTitle id="forecastCityA">Starting Point</span>
 </div></div>
 
 <div class="weather-forecast" id="forecastA"></div>
 
-<div class="col-12"><div class="card_cityTitle">
+<div class="col-12"><div class="card_cityTitle" id="cityTitleB">
 <span class=forecastCitiesTitle id="forecastCityB">Checkpoint #1</span>
 </div></div>
 <div class="weather-forecast" id="forecastB"></div>
 
-<div class="col-12"><div class="card_cityTitle">
+<div class="col-12"><div class="card_cityTitle" id="cityTitleC">
 <span class=forecastCitiesTitle id="forecastCityC">Checkpoint #2</span>
 </div></div>
-<div class="weather-forecast" id="forecastC"></div>    
+<div class="weather-forecast" id="forecastC" ></div>    
 
-<div class="col-12"><div class="card_cityTitle">
+<div class="col-12"><div class="card_cityTitle" id="cityTitleD">
 <span class=forecastCitiesTitle id="forecastCityD">Checkpoint #3</span>
 </div></div>
 <div class="weather-forecast" id="forecastD"></div>  
 
-<div class="col-12"><div class="card_cityTitle">
+<div class="col-12"><div class="card_cityTitle" id="cityTitleE">
 <span class=forecastCitiesTitle id="forecastCityE">Destination</span>
 </div></div>
 <div class="weather-forecast" id="forecastE"></div>  
@@ -247,6 +240,8 @@
 
 
 </div>
+
+<div class="codedBy"><a href="https://github.com/ljgolding/SheCodes_WeatherAgain">Open Source Code</a> by Lindsay Golding</div>
 
 <script src="src/index.js"></script>
 </body>
